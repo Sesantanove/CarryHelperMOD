@@ -1,10 +1,13 @@
 package me.Sesantanove.CarryHelper;
 
+import javafx.scene.control.Skin;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
+import net.minecraft.client.renderer.tileentity.TileEntitySkullRenderer;
 import net.minecraft.util.ResourceLocation;
 import scala.collection.parallel.ParIterableLike;
 
@@ -91,14 +94,12 @@ public class GUI_Handler extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawDefaultBackground();
-        Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("carryhelper"/* or your modid */, "textures/gui/background.png"));
+        Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation("carryhelper", "textures/gui/background.png"));
         FontRenderer fr = Minecraft.getMinecraft().fontRendererObj;
         int n=0;
         String txt="";
         for (String i : carry.keySet()) {
             txt=i+" "+carry.get ( i )+"x Times";
-            System.out.println ( i );
-            int textWidth = fr.getStringWidth(txt);
             fr.drawString(txt, width / 2 - 85, height / 2 - (58-(n*10)), -1);
             n++;
         }
