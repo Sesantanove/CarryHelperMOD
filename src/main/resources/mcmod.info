@@ -11,7 +11,7 @@
       "Sesantanove"
     ],
     "credits": "Sesantanove",
-    "logoFile": "",
+    "logoFile": "assets/carryhelper/textures/gui/logo",
     "screenshots": [],
     "dependencies": []
   }
