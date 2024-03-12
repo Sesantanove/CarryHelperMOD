@@ -1,5 +1,6 @@
 package me.Sesantanove.CarryHelper;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import org.apache.logging.log4j.LogManager;
